@@ -1,0 +1,346 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Tahoma, serif;
+}
+body{
+    background: #3b3a3a;
+    color: #fff;
+    height: 1000px;
+}
+/* start header  */
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/shutterstock_1828013081.webp');
+    background-size: cover;
+    /* background-position: center; */
+}
+#header .nav .container{
+    width: 1200px;
+    margin: auto;
+}
+#header .nav{
+    overflow: hidden;
+}
+#header .nav h2{
+    color: chocolate;
+    float: left;
+    margin: 20px;
+    font-size: 25px;
+}
+#header .nav span{
+    color: black;
+}
+#header .nav ul{
+    /* padding-left: 0; */
+    /* overflow: hidden; */
+    float: right;
+    margin: 20px;
+    list-style: none;
+}
+#header .nav ul li{
+    float: left;
+    padding-left: 20px;
+}
+#header .nav ul li a{
+    /* list-style: none; */
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+#header .nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: chocolate; 
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+#header .nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text .container{
+    width: 1200px;
+    margin: auto;
+}
+.header-text .text-nav p{
+    color: #080808;
+    font-size: 25px;
+    margin-top:20% ;
+}
+.header-text .text-nav h2{
+    color: #080808;
+    font-size: 40px;
+}
+.header-text .text-nav span{
+    color: chocolate;
+    
+}
+/* end header */
+/* sart about */
+#about{
+    padding: 50px 0 0 80px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex: wrap;
+}
+#about .container{
+    width: 1200px;
+    margin: auto;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.about-col-2 h1{
+    color: #fff;
+    padding-bottom: 10px;
+}
+.about-col-2 p{
+    color: #a39e9e;
+}
+.tab-title{
+    display: flex;
+    margin: 20px 0 0 0;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: chocolate;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 100%;
+}
+.tab-contant ul li{
+    margin: 20px 0;
+}
+.tab-contant ul li span{
+    list-style: none;
+    color: chocolate;
+}
+.tab-contant{
+    display: none;
+}
+.tab-contant.active-tab{
+    display: block;
+}
+/* end about */
+/* start services */
+#services{
+    padding: 50px 0 0 80px;
+}
+#services .container{
+    width: 1200px;
+    margin: auto;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 40px;
+}
+.services-list div{
+    background: #5b5959;
+    font-size: 15px;
+    padding: 25px;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+.services-list div i{
+    font-size: 40px;
+    margin-bottom: 13px;
+}
+.services-list div h2{
+    font-size: 30px;
+    margin-bottom: 13px;
+}
+.services-list div p{
+    padding-bottom: 10px;
+}
+.services-list div a{
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(239, 236, 234);
+}
+.services-list div:hover{
+    background: linear-gradient(rgb(0,0,0,0.6),chocolate);
+    transform: translateY(-20px);
+}
+/* end services */
+/* start portfolio */
+#portofolio{
+    padding: 50px 0 0 80px;
+}
+#portofolio .container{
+    width: 1200px;
+    margin: auto;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 40px;
+}
+.work{
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgb(0,0,0,0.6),chocolate);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: -1px 0 0 80px;
+    transition:height  0.5s;
+}
+.layer h3{
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    background: #fff;
+    font-size: 20px;
+    line-height: 60px;
+    width: 60px;
+    height: 60px;
+    text-decoration: none;
+    color: chocolate;
+    border-radius: 50%;
+    text-align: center;
+
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    width: 100%;
+}
+.btn{
+    text-decoration: none;
+    border: chocolate solid 1px;
+    border-radius: 5px;
+    color: #fff;
+    margin: 22px auto;
+    display: block;
+    text-align: center;
+    width: fit-content;
+    padding: 15px 50px;
+}
+.btn:hover{
+    background:linear-gradient(rgba(214, 145, 81, 0.6),chocolate); ;
+}
+
+/* end portfolio */
+/* start contant  */
+#contant{
+    padding: 50px 0 0 80px;
+}
+#contant .container{
+    width: 1200px;
+    margin: auto;
+}
+.contant-left{
+    flex-basis: 35%;
+}
+.contant-right{
+    flex-basis: 60%;
+}
+.contant-left p{
+    margin-top: 20px;
+}
+.contant-left p i{
+    color: chocolate;
+    margin-right: 15px;
+    font-size: 22px;
+}
+.social-icons{
+    margin-top:15px ;
+}
+.social-icons a{
+    margin-right: 15PX;
+    font-size: 22PX;
+    color: #FFF;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: chocolate;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: chocolate;
+}
+.contant-right form{
+    width: 100%;
+}
+.contant-right input ,textarea{
+    width: 100%;
+    margin: 15px 0;
+    padding: 10px;
+    background: #585757;
+    border: 0;
+    border-radius: 5px;
+    outline:none ;
+    font-size: 15px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.copyright{
+    /* width: 100%; */
+    background: #585757;
+    text-align: center;
+    padding: 20px ;
+    font-weight: 300;
+
+}
+.copyright i{
+    color: chocolate;
+}
+
+
+/* end contant  */
+
